@@ -1,6 +1,6 @@
 from turtle import Turtle, Screen
 
-player = Turtle()
+user = Turtle()
 
 
 screen = Screen()
