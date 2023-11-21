@@ -12,13 +12,25 @@ def move_backwards():
 
 
 def move_left():
-    player.lt()
+    player.lt(10)
 
 
 def move_right():
-    player.rt()
+    player.rt(10)
+
+
+def clear():
+    player.clear()
+    player.penup()
+    player.home()
+    player.pendown()
 
 
 screen = Screen()
-screen.onkey(move_forwards, "space")
+screen.listen()
+screen.onkey(move_forwards, "w")
+screen.onkey(move_backwards, "s")
+screen.onkey(move_left, "a")
+screen.onkey(move_right, "d")
+screen.onkey(clear, "c")
 screen.exitonclick()
